@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- Include the style.css file for stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	
+	<script type="text/javascript">
+	$( '#menu' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#rating').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);				
+		 });
+	});
+	</script>
+
+</head>
+<body>
+
+<div data-role="page" id="menu" data-add-back-btn="true" data-theme="b">
+	<div data-role="header">
+		<h1>Red Rock Restaurant</h1>
+    </div>
+	
+	
+	<div data-role="content">
+		<div id="logo"></div>	
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<img src="images/brownies.jpg">
+			</div>
+			
+			<div class="ui-block-b">
+				<h3>Chocolate Brownies Marbled with Cheesecake</h3>
+				<h4>Ingredients</h4>
+				<ul>
+					<li><strong>Softened Cream Cheese</strong></li>
+					<li><strong>White Sugar</strong></li>
+					<li><strong>Egg</strong></li>
+					<li><strong>Butter</strong></li>
+					<li><strong>Dark Chocolate Chips</strong></li>
+					<li><strong>Plain Flour</strong></li>
+					<li><strong>Baking Powder</strong></li>
+					<li><strong>Salt</strong></li>
+				</ul>
+			</div>
+			
+			<div class="ui-block-c">
+				<h3>Directions</h3>
+				<ol>
+					<li><strong>Preheat oven to 180 degrees C. Grease a 23cm square cake tin.</strong></li>
+					<li><strong>Combine cream cheese with 1/4 cup (55g) sugar and 1 egg in a mixing bowl; beat until smooth. Stir 1 cup chocolate chips into the cream cheese mixture. Set aside.</strong></li>
+					<li><strong>Fill a saucepan with water and bring to a boil. Turn the heat off and set a heatproof mixing bowl over the water.</strong></li>
+					<li><strong>In the mixing bowl, combine butter with the remaining cup of chocolate chips; stir until just melted and blended together. Stir in the remaining 1/2 cup (110g) sugar and 2 eggs, then sift together flour, baking powder and salt; stir into chocolate until evenly blended.</strong></li>
+					<li><strong>Pour half of the batter into the prepared cake tin. Spread the cream cheese mixture over the chocolate layer.</strong></li>
+					<li><strong>Top with remaining chocolate mixture (this doesn't need to completely cover the cream cheese layer).</strong></li>
+					<li><strong>Using a knife, swirl the top chocolate layer into the cream cheese to make a marble pattern.</strong></li>
+					<li><strong>Bake in preheated oven at 180 degrees C for 25 to 30 minutes, or until top is crinkled and edges pull away from sides of the pan.</strong></li>
+					<li><strong>Cool thoroughly. Cut into 12 to 16 squares. Store in the refrigerator or freeze.</strong></li>
+				</ol>
+			</div>
+	</div>
+	
+	<div id="ratebox">	
+	<form>
+	<label for="select-choice-0" class="select"><h3>Food Rating</h3></label>
+		<select name="rating"" id="rating" data-native-menu="false" data-theme="c" >
+			<option value="one" class="one">Not Interested at All</option>
+			<option value="two" class="two">A Little BIt Interested</option>
+			<option value="three" class="three">Looks Good, Really Interested</option>
+			<option value="four" class="four">Highly Interested</option>
+		</select>	
+	</form>
+	</div>
+
+	
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<!-- Include the style.css file for stylesheet -->
+	<link rel="stylesheet" href="style.css">
+
+	<script type="text/javascript">
+	$( '#menu' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#rating').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);				
+		 });
+	});
+	</script>
+	
+</head>
+<body>
+
+<div data-role="page" id="garlicbread"  data-add-back-btn="true" data-theme="b">
+	<div data-role="header">
+		<h1>Red Rock Restaurant</h1>
+    </div>
+	
+	<div data-role="content">
+		<div id="logo"></div>
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<img src="images/garlicbread.jpg">
+			</div>
+			
+			<div class="ui-block-b">
+				<h3><italic>Toasted Garlic Bread</italic></h3>
+				<h4>Ingredients</h4>
+				<ul>
+					<li><strong>Italian Bread</strong></li>
+					<li><strong>Softened Butter</strong></li>
+					<li><strong>Extra Virgin Olive Oil</strong></li>
+					<li><strong>Crushed Garlic Cloves</strong></li>
+					<li><strong>Dried Oregano</strong></li>
+					<li><strong>Salt and Pepper</strong></li>
+					<li><strong>Mozzarella Cheese</strong></li>
+				</ul>
+			</div>
+			
+			<div class="ui-block-c">
+				<h3>Directions</h3>
+				<ol>
+					<li><strong>Preheat the broiler.</strong></li>
+					<li><strong>Cut the bread into slices 1 to 2 inches thick.</strong></li>
+					<li><strong>In a small bowl, mix butter, olive oil, garlic, oregano, salt and pepper. Spread the mixture evenly on the bread slices.</strong></li>
+					<li><strong>On a medium baking sheet, arrange the slices evenly and broil 5 minutes, or until slightly brown. Check frequently so they do not burn.</strong></li>
+					<li><strong>Remove from broiler. Top with cheese and return to broiler 2 to 3 minutes, until cheese is slightly brown and melted. Serve at once.</strong></li>
+				</ol>
+			</div>
+	</div>
+	
+	<div id="ratebox">	
+	<form>
+	<label for="select-choice-0" class="select"><h3>Food Rating</h3></label>
+		<select name="rating"" id="rating" data-native-menu="false" data-theme="c" >
+			<option value="one" class="one">Not Interested at All</option>
+			<option value="two" class="two">A Little BIt Interested</option>
+			<option value="three" class="three">Looks Good, Really Interested</option>
+			<option value="four" class="four">Highly Interested</option>
+		</select>	
+	</form>
+	</div>
+</div> 
+
+</body>
+</html>

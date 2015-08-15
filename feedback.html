@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<!-- Include the style.css file for stylesheet -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div data-role="page" id="feedback"  data-add-back-btn="true" data-theme="b">
+	<div data-role="header">
+		<h1>Red Rock Restaurant</h1>
+    </div>
+	
+	<div class="content">
+		<div id="logo"></div>
+		<h1>Customer Feedback</h1>
+		<form name="feedback" method="post" action="ty.html">
+			<label>Customer Name:</label>
+			<input id="cname" type="text" maxlength="50">
+		
+			<label>Customer E-Mail:</label>
+			<input id="cemail" type="text" maxlength="60">
+		
+			<label>What do you think about us:</label>
+			<textarea id="comment" maxlength="500"></textarea>
+			<input type="Submit" value="submit" data-inline="true">
+			<input type="Reset" value="reset" data-inline="true">
+		</form>
+	</div>
+
+	
+</div> 
+
+</body>
+</html>

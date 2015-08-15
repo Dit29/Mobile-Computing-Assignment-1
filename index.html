@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<!-- Include the style.css file for stylesheet -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div data-role="page" id="index" data-theme="b">
+	<div data-role="header">
+		<h1>Red Rock Restaurant</h1>
+    </div>
+	
+	<div data-role="content">
+		<div id="logo"></div>
+		<h1>Please choose a menu below.</h1>
+	</div>
+ 
+	<!-- Start ui-grid-b -->
+	<div class="ui-grid-b">
+		<div class="ui-block-a">
+			<a href="appetizers.html" class="ui-btn ui-corner-all ui-shadow">Appetizers</a>
+		</div>
+		<div class="ui-block-b">
+			<a href="main.html" class="ui-btn ui-corner-all ui-shadow">Main Courses</a>
+		</div>
+		<div class="ui-block-c">
+			<a href="dessert.html" class="ui-btn ui-corner-all ui-shadow">Desserts and Drinks</a>
+		</div>
+		
+		<div class="ui-block-a">
+			<a href="tel:0431764523" class="ui-btn ui-corner-all ui-shadow">Click-to-Call</a>
+		</div>
+		<div class="ui-block-b">
+			<a href="feedback.html" class="ui-btn ui-corner-all ui-shadow">Feedback</a>
+		</div>
+		<div class="ui-block-c">
+			<a href="about.html" class="ui-btn ui-corner-all ui-shadow">About Us</a>
+		</div>
+	</div><!-- End of ui-grid-b -->
+
+	<div data-role="footer" style="text-align:center">
+		<a href="developer.html" class="ui-btn"><strong>Developer</strong></a>
+	</div>
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	<!-- Include the style.css file for stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	
+	<script type="text/javascript">
+	$( '#menu' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#rating').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);				
+		 });
+	});
+	</script>
+
+</head>
+<body>
+
+<div data-role="page" id="menu" data-add-back-btn="true" data-theme="b">
+	<div data-role="header">
+		<h1>Red Rock Restaurant</h1>
+    </div>
+	
+	<div data-role="content">
+		<div id="logo"></div>	
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<img src="images/steak.jpg" height="200" width="250">
+			</div>
+			
+			<div class="ui-block-b">
+				<h3>Mixed Pepper Crusted Steak with Mushroom Salad</h3>
+				<h4>Ingredients</h4>
+				<ul>
+					<li><strong>Whole Black Peppercorns</strong></li>
+					<li><strong>Dried Green Peppercorns</strong></li>
+					<li><strong>Szechuan Peppercorns</strong></li>
+					<li><strong>Trimmed Sirloin Steak</strong></li>
+					<li><strong>Lightly Beaten White Egg</strong></li>
+					<li><strong>Sliced Portobello Mushroom</strong></li>
+					<li><strong>Garlic Clove</strong></li>
+					<li><strong>Extra Virgin Oil</strong></li>
+					<li><strong>Shredded Spring Onion</strong></li>
+					<li><strong>Baby Spinach Leaves</strong></li>
+					<li><strong>Dijon Mustard</strong></li>
+					<li><strong>Balsamic Vinegar</strong></li>
+				</ul>
+			</div>
+			
+			<div class="ui-block-c">
+				<h3>Directions</h3>
+				<ol>
+					<li><strong>Preheat a chargrill pan to medium-high.</strong></li>
+					<li><strong>Coarsely crush all the peppercorns in a spice grinder or mortar and pestle. Transfer to a plate.</strong></li>
+					<li><strong>Lightly brush each side of the steaks with eggwhite and press into the peppercorn mixture to coat. Season and set aside.</strong></li>
+					<li><strong>Rub the mushroom with the garlic. Place in a bowl and toss with 2 tablespoons oil, then season. Chargrill for 2-3 minutes each side until charred. Set aside to cool.</strong></li>
+					<li><strong>Chargrill steaks for 6-8 minutes, turning once, for medium-rare. Rest, loosely covered with foil, for 5 minutes.</strong></li>
+					<li><strong>Meanwhile, toss mushroom, spring onion and spinach together. Whisk together Dijon, balsamic and remaining 2 tablespoons oil, season, then toss with the salad.</strong></li>
+					<li><strong>Divide the steaks and mushroom salad among 4 plates and serve.</strong></li>
+				</ol>
+			</div>
+	</div>
+	
+	<div id="ratebox">	
+	<form>
+	<label for="select-choice-0" class="select"><h3>Food Rating</h3></label>
+		<select name="rating"" id="rating" data-native-menu="false" data-theme="c" >
+			<option value="one" class="one">Not Interested at All</option>
+			<option value="two" class="two">A Little BIt Interested</option>
+			<option value="three" class="three">Looks Good, Really Interested</option>
+			<option value="four" class="four">Highly Interested</option>
+		</select>	
+	</form>
+	</div>
+
+	
+</div> 
+
+</body>
+</html>
