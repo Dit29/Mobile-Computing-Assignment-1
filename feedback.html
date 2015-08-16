@@ -17,31 +17,30 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- Start of feedback page -->
 <div data-role="page" id="feedback"  data-add-back-btn="true" data-theme="b">
 	<div data-role="header">
 		<h1>Red Rock Restaurant</h1>
     </div>
 	
+	<!-- Start of content -->
 	<div class="content">
 		<div id="logo"></div>
 		<h1>Customer Feedback</h1>
 		<form name="feedback" method="post" action="ty.html">
-			<label>Customer Name:</label>
+			<label>Customer Name:</label><!-- Customer name field -->
 			<input id="cname" type="text" maxlength="50">
 		
-			<label>Customer E-Mail:</label>
+			<label>Customer E-Mail:</label><!-- Customer email field -->
 			<input id="cemail" type="text" maxlength="60">
 		
-			<label>What do you think about us:</label>
+			<label>What do you think about us:</label><!-- Feedback field -->
 			<textarea id="comment" maxlength="500"></textarea>
 			<input type="Submit" value="submit" data-inline="true">
 			<input type="Reset" value="reset" data-inline="true">
 		</form>
-	</div>
-
-	
-</div> 
+	</div><!-- End of content -->
+</div><!-- End of feedback page -->
 
 </body>
 </html>
